@@ -1,4 +1,5 @@
 ---
+title: "Holy cow!"
 ---
 
 <img src="Lavery_170407_12.jpg" style="width:40%; margin-right: 15px" align="left">
