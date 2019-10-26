@@ -11,11 +11,11 @@ navbar:
     - text: "Download CV"
       href: Lavery_Resume_2019.pdf
     - icon: fa-envelope fa-lg
-      href: https://www.mskcc.org/profile/jessica-lavery 
+      href: mailto:<jl4443@cumc.columbia.edu>
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/jalavery/
     - icon: fa-github fa-lg
-      href: https://github.mskcc.org/laveryj
+      href: https://github.com/jalavery
 output:
   html_document:
-    theme: cerulean
+    theme: lumen

@@ -2,11 +2,42 @@
 title: "Resume"
 ---
 
-## Current Role
+### Academic Experience
 
-Biostatistician, Memorial Sloan Kettering Cancer Center
+2012 BS, Statistics, Loyola University Maryland
 
-### Current Research Interests
+2014 MS, Biostatistics, University of North Carolina at Chapel Hill
+
+### Professional Experience & Research Interests
+
+2017 - Present: Biostatistician, **Memorial Sloan Kettering Cancer Center**
+
+* Collaborate with health services researchers to answer questions related to healthcare utilization and outcomes for patients with cancer using large population-based administrative databases (Surveillance, Epidemiology, and End Results (SEER)-Medicare linked data, Medicare claims). 
+
+* Guide study design, conduct statistical analyses, interpret results and write methods and results sections of manuscripts.
+
+* Contribute to grant planning and writing.
+
+* Authored two manuscripts validating the feasibility of using Medicare claims for cancer-specific analyses.
+
+* Developed a repository of SAS macros for routine tasks (e.g. pulling claims from SEER-Medicare data) to improve efficiency and reproducibility.
+
+* Built a project management tool through the R Shiny Application package to easily view the status of past, current and upcoming projects across multiple statisticians. 
+
+2016-2017: Biostatistician, Orthopedic Surgery, **NYU Langone Hospital for Joint Diseases**
+
+* Collaborated with the Department of Population Health to analyze orthopaedic health outcomes utilizing large administrative databases (Healthcare Cost and Utilization Project, Statewide Planning and Research Cooperative System, National Ambulatory Medical Care Survey). 
+
+* Consulted with faculty, residents, fellows and musculoskeletal research staff in the Department of Orthopedic Surgery to design studies, manage and analyze data, present results, and write methods and results sections of manuscripts.
+
+2014-2016: Biostatistician, Obstetrics & Gynecology, **Columbia University Medical Center**
+
+* Provided data management, programming and biostatistics support for the Safe Motherhood Initiative (Merck for Mothers), examining the impact of developing standard approaches to treat obstetric emergencies.
+
+* Utilized large administrative claims databases (National Hospital Discharge Survey, National Vital Statistics System, Premier Perspectives) to explore maternal-fetal outcomes via hierarchical models, age-period-cohort models, and meta-analyses, among other methods.
+
+### Current Research Interests:
+
 #### Hospital Profiling
 
 I am part of a team of statisticians, health services researchers and oncologists at MSK working to measure the quality of surgical cancer care provided to patients across the United States. Hospital profiling refers to measuring each hospitals' specific patient-level outcomes, and potentially reporting those outcomes publicly so that patients may make informed decisions regarding where to pursue care and hospitals may work towards improving their quality, when needed. This project is multifaceted, and involves validating a relevant data source for this endeavor, assessing variables essential for risk-adjustment, considering how to evaluate hospitals with few surgeries from which we can observe outcomes, and weighing the different statistical methods available to determine which is most appropriate given its implications.  
@@ -21,19 +52,13 @@ Previous:
 
 [Practical and Methodological Issues Related to Profiling Hospitals in the United States](https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/ActivityDetails.cfm?SessionID=215548), Joint Statistical Meetings, 2018   
 
-#### Other Health Outcomes Projects
-<font size="4"><i>Opioid use in older adults with cancer  </font></i>  
+#### Opioid use in older adults with cancer 
 Cancer survivors may be at increased risk of opioid-related harms because of exposure to opioids during treatment, high prevalence of pain after treatment, and heightened risk of addiction among people with tobacco- and alcohol-related cancers. Using the Surveillance, Epidemiology and End Results (SEER) registry linked to Medicare claims, we conducted a retrospective matched cohort study to compare receipt of chronic opioid therapy (90-days of continuous use) between cancer survivors and cancer-free controls from 2008 through 2014.  
 
-<font size="4"><i>Quality of life in melanoma patients treated with immunotherapy </font></i>   
+#### Quality of life in melanoma patients treated with immunotherapy 
 Given the rapid pace of incorporation of checkpoint inhibitors into practice and the rising number of patients treated with these drugs as part of routine care, an assessment of the impact of these agents on patient quality of life, with attention to both the symptom and financial burdens associated with immunotherapy, is necessary to optimize care. 
 
-<font size="4"><i>Hospital interpreter policies  </font></i>  
+#### Hospital interpreter policies
 Patients with limited English proficiency (LEP) are at risk of impaired communication with their clinicians and thus disparities in cancer treatment completion. Despite knowledge that the use of professional interpreters improves patient care for LEP patients, research has shown that clinicians underuse language services in favor of their own, often limited, non-English skills. We conducted a nation-wide hospital survey to investigate the current policies of hospitals that care for LEP cancer patients to inform guidelines for linguistically appropriate care, which was identified as a priority by the Commission to End Health Disparities.
 <br>
 
-## Previous Roles
-
-Biostatistician, Orthopedic Surgery, NYU Langone Hospital for Joint Diseases (2016-2017)
-
-Biostatistician, Obstetrics & Gynecology, Columbia University Medical Center (2014-2016)
