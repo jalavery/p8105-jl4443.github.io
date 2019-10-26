@@ -3,14 +3,15 @@ output_dir: "."
 navbar:
   title: "Jessica Lavery" 
   right:
-    
-    - text: "portfolio"
-    - text: "CV"
-      href: files/Lavery_Resume_2019_04.pdf
+  
+    - text: "About Me"
+      href: index.html
+    - text: "Resume"
+      href: resume.html
+    - text: "Download CV"
+      href: Lavery_Resume_2019.pdf
     - icon: fa-envelope fa-lg
       href: https://www.mskcc.org/profile/jessica-lavery 
-    - icon: ai-google-scholar-square ai-lg
-      href: https://scholar.google.com/citations?user=4_XbhlgAAAAJ&hl=en 
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/jalavery/
     - icon: fa-github fa-lg
