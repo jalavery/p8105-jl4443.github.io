@@ -1,0 +1,87 @@
+---
+title: "Restaurant Inspections in New York City"
+subtitle: "Among a subset of restaurants of selected cuisine"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("rest_inspec")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+```{r}
+# subset the data based on type of cuisine to get a smaller sample of restaurants for the dashboard. 
+rest_sample <- rest_inspec %>% 
+  filter(cuisine_description %in% c("American", "Chinese", "Spanish", "Mexican", "Mediterranean", "Italian", "French"))
+```
+
+
+### Restaurant Inspection Score by Cuisine Type
+
+```{r}
+# Lower inspection scores indicate better adherance to City and State food safety requirements. There is a similar distribution of inspection score by cuisine. 
+
+rest_sample %>% 
+  #scores <0 are inaccurate based on the definition of the score
+  filter(score > 0) %>% 
+  plot_ly(y = ~score, color = ~cuisine_description, type = "box",
+          colors = "Set2") %>% 
+  layout(title = "Distribution of Restaurant Inspection Score by Cuisine Type",
+         xaxis = list(title = "Cuisine type"), yaxis = list(title = "Score"))
+  # ggplot(aes(x = cuisine_description, y = score)) + 
+  # geom_boxplot()
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Inspection Grade by Borough 
+
+```{r}
+#There were similar percentages of restaurants in each inspection grade category by boro. 
+
+# percent of grades by boro
+grade_by_boro <- rest_sample %>% 
+    drop_na(grade) %>%
+    filter(!(grade %in% c("Not Yet Graded", "P", "Z"))) %>% 
+    mutate(boro = str_to_sentence(boro)) %>% 
+    group_by(boro, grade) %>% 
+    summarize(n_by_grade = n()) %>% 
+    group_by(boro) %>% 
+    mutate(n_graded_inspections = sum(n_by_grade),
+           pct_by_grade = 100*n_by_grade / n_graded_inspections)
+
+plot_ly(data = grade_by_boro, x = ~grade, y = ~pct_by_grade, 
+        color = ~boro, type = "bar", colors = "Set2") %>% 
+  layout(title = "Inspection grade by borough",
+         xaxis = list(title = "Inspection Grade"), yaxis = list(title = "Percent of Graded Inspections"))
+
+```
+
+### Number of inspections
+
+```{r}
+# number of inspections over time
+n_inspections <- rest_sample %>% 
+  mutate(year = lubridate::year(inspection_date)) %>% 
+  filter(year >= 2013) %>% 
+  group_by(boro, year) %>% 
+  summarize(n_inspections = n())
+
+plot_ly(data = n_inspections, x = ~year, y = ~n_inspections, 
+        color = ~boro, type = 'scatter', mode = 'lines') %>% 
+  layout(title = "No. of Inspections Over Time by Borough",
+         xaxis = list(title = "Year"), yaxis = list(title = "Number of Inspections"))
+```
+
